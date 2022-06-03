@@ -22,7 +22,6 @@
        >
        <Todo :todoItems="todos" @delete-todo="todoDeleter" @edit-todo="todoEditor"></Todo>
        </div>
-      <!-- <div class="tab-pane show fade active" v-else>three</div> -->
     </div>
 </div>
 </template>
@@ -30,6 +29,7 @@
 import AddList from '../components/AddList.vue'
 import Todo from '../components/Todo.vue'
 import todoApi from '../api/todos'
+
 export default{
   props: {
     items: {
@@ -83,7 +83,6 @@ export default{
       })
       .catch(err => console.log(err))
     },
-
     todoEditor({ key }){
     console.log( key );
       this.todos.map( item => {
